@@ -5,7 +5,7 @@ set -e
 INSTALL_DIR="/usr/local/bin"
 REPO="vic-Rokx/fabric-cli"
 VERSION="v1.0.0"
-TARBALL="fabric-1.0.0-darwin-arm64.tar.gz"
+TARBALL="fabric-1.0.1-darwin-arm64.tar.gz"
 BINARY_NAME="fabric"
 
 echo "Installing fabric-cli..."
@@ -16,15 +16,14 @@ if [[ $(uname -m) != "arm64" ]]; then
     exit 1
 fi
 
-# Download the release tarball (not source code)
+# Download the release tarball
 curl -L -o /tmp/$TARBALL https://github.com/$REPO/releases/download/$VERSION/$TARBALL
 
 cd /tmp
 tar -xzf $TARBALL
 
-# Navigate to extracted directory and copy binary
-cd fabric-1.0.0-darwin-arm64
-sudo cp bin/$BINARY_NAME $INSTALL_DIR/
+# Copy binary from the extracted structure
+sudo cp fabric-1.0.1-darwin-arm64/bin/$BINARY_NAME $INSTALL_DIR/
 sudo chmod +x $INSTALL_DIR/$BINARY_NAME
 
 # Cleanup
