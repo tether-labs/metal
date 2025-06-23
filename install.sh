@@ -4,8 +4,8 @@ set -e
 # macOS install script for fabric-cli
 INSTALL_DIR="/usr/local/bin"
 REPO="vic-Rokx/fabric-cli"
-VERSION="v1.0.3"
-TARBALL="fabric-1.0.3-darwin-arm64.tar.gz"
+VERSION="v1.0.4"
+TARBALL="fabric-1.0.4-darwin-arm64.tar.gz"
 BINARY_NAME="fabric"
 
 echo "Installing fabric-cli..."
@@ -36,11 +36,11 @@ cd /tmp
 tar -xzf $TARBALL
 
 # Copy binary from the extracted structure
-sudo cp fabric-1.0.3-darwin-arm64/bin/$BINARY_NAME $INSTALL_DIR/
+sudo cp fabric-1.0.4-darwin-arm64/bin/$BINARY_NAME $INSTALL_DIR/
 sudo chmod +x $INSTALL_DIR/$BINARY_NAME
 
 # Cleanup
-rm -rf /tmp/$TARBALL /tmp/fabric-1.0.3-darwin-arm64
+rm -rf /tmp/$TARBALL /tmp/fabric-1.0.4-darwin-arm64
 
 echo "fabric installed successfully!"
 echo "You can now run: fabric"
