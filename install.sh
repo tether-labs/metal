@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
 
-# macOS install script for fabric-cli
+# macOS install script for metal-cli
 INSTALL_DIR="/usr/local/bin"
-REPO="vic-Rokx/fabric-cli"
-VERSION="v1.0.4"
-TARBALL="fabric-1.0.4-darwin-arm64.tar.gz"
-BINARY_NAME="fabric"
+REPO="vic-Rokx/metal"
+VERSION="v1.0.5"
+TARBALL="metal-1.0.5-darwin-arm64.tar.gz"
+BINARY_NAME="metal"
 
-echo "Installing fabric-cli..."
+echo "Installing Metal Cli..."
 
 # Check if running on Apple Silicon
 if [[ $(uname -m) != "arm64" ]]; then
@@ -36,11 +36,11 @@ cd /tmp
 tar -xzf $TARBALL
 
 # Copy binary from the extracted structure
-sudo cp fabric-1.0.4-darwin-arm64/bin/$BINARY_NAME $INSTALL_DIR/
+sudo cp metal-1.0.5-darwin-arm64/bin/$BINARY_NAME $INSTALL_DIR/
 sudo chmod +x $INSTALL_DIR/$BINARY_NAME
 
 # Cleanup
-rm -rf /tmp/$TARBALL /tmp/fabric-1.0.4-darwin-arm64
+rm -rf /tmp/$TARBALL /tmp/metal-1.0.5-darwin-arm64
 
-echo "fabric installed successfully!"
-echo "You can now run: fabric"
+echo "Metal installed successfully!"
+echo "You can now run: metal"

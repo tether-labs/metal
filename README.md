@@ -1,14 +1,14 @@
-# Install Fabric CLI
+# Install Metal CLI
 
-Run this command to install fabric-cli on your macOS (Apple Silicon):
+Run this command to install metal-cli on your macOS (Apple Silicon):
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/vic-Rokx/fabric-cli/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/tether-labs/metal/main/install.sh | bash
 ```
 
 ## What this does:
-- Downloads the latest version of fabric-cli
-- Installs it to `/usr/local/bin/fabric`
+- Downloads the latest version of metal-cli
+- Installs it to `/usr/local/bin/metal`
 - Makes it executable and available in your PATH
 
 ## Requirements:
@@ -17,5 +17,5 @@ curl -sSL https://raw.githubusercontent.com/vic-Rokx/fabric-cli/main/install.sh 
 
 After installation, you can run:
 ```bash
-fabric --help
+metal --help
 ```
