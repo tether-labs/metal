@@ -3,7 +3,7 @@ set -e
 
 # macOS install script for metal-cli
 INSTALL_DIR="/usr/local/bin"
-REPO="vic-Rokx/metal"
+REPO="tether-labs/metal"
 VERSION="v1.0.5"
 TARBALL="metal-1.0.5-darwin-arm64.tar.gz"
 BINARY_NAME="metal"
